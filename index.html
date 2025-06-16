@@ -43,6 +43,15 @@
       font-size: 16px;
     }
 
+    .book-link, .tiktok {
+      display: block;
+      margin: 15px 0;
+      font-size: 150%;
+      font-weight: bold;
+      color: blue;
+      text-decoration: none;
+    }
+
     /* Slideshow */
     .slideshow-container {
       position: relative;
@@ -97,12 +106,6 @@
       from { opacity: .4 }
       to { opacity: 1 }
     }
-
-    a.tiktok {
-      display: inline-block;
-      margin-top: 10px;
-      color: blue;
-    }
   </style>
 </head>
 <body>
@@ -112,10 +115,9 @@
 
   <p class="warning">⚠️ WARNING: Don’t try this at home. Anyone else would break their neck. Right now, Reuben Soul is the only one in the world who does this.</p>
 
-  <p>
-    👉 <strong><a href="https://www.amazon.com/dp/B0FBMHDM9L" target="_blank">
-    Get the Book on Amazon – Strength to Stand</a></strong>
-  </p>
+  <a class="book-link" href="https://www.amazon.com/dp/B0FBMHDM9L" target="_blank">
+    📚 Get the Book on Amazon – Strength to Stand
+  </a>
 
   <img src="strength_to_stand_cover.jpg" alt="Reuben Soul Book Cover">
 
@@ -150,60 +152,4 @@
 
   <div class="donation-box">
     <h2>Support the Mission</h2>
-    <p>If you feel moved by this story, support Reuben Soul’s mission to heal the world and help war-affected children.</p>
-    <p><strong>Cash App:</strong> $freedom555</p>
-    <p><strong>PayPal:</strong> stayfitfitnessfun@gmail.com</p>
-    <p><strong>Novo Bank (International):</strong><br>
-      Account Number: 99250161<br>
-      Routing Number: 211370150
-    </p>
-    <p><strong>Call or Text:</strong> <a href="tel:8189756968">818-975-6968</a></p>
-  </div>
-
-  <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-    }
-
-    // Auto slideshow (slower timing)
-    let autoIndex = 0;
-    carousel();
-
-    function carousel() {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      autoIndex++;
-      if (autoIndex > slides.length) { autoIndex = 1 }
-      slides[autoIndex - 1].style.display = "block";
-      setTimeout(carousel, 6000); // 6 seconds
-    }
-  </script>
-
-</body>
-</html>
+    <p>If you feel moved by this story, support Reuben Soul’s mission to heal the world and help war-aff
