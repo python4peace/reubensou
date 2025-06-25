@@ -1,326 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Zina Singing 4 Fitness Peace - Complete Healing Platform</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: 'Poppins', sans-serif;
-      }
-      .gradient-bg {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      }
-      .video-container {
-        width: 40%;
-        height: 300px;
-      }
-      .transformation-hero {
-        background: linear-gradient(
-            rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.7)
-          ),
-          url('https://page1.genspark.site/v1/base64_upload/c5ebf8ab8709bd42ff85c8144b8013b1');
-        background-size: cover;
-        background-position: center;
-      }
-      .floating-action {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-      }
-      .section-spacing {
-        margin-bottom: 40px;
-      }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reuben Soul | Live Performances & Bookings</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  /* Smooth floating animation for main image */
+  @keyframes floatUpDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
 
-      /* Floating animation */
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-15px);
-        }
-      }
+  /* Slow flying birds animation */
+  @keyframes flyLeftRight {
+    0% { transform: translateX(-100px); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateX(100vw); opacity: 0; }
+  }
 
-      .floating-text {
-        animation: float 3s ease-in-out infinite;
-        display: inline-block;
-      }
-    </style>
+  /* Angel fade and slight float */
+  @keyframes angelFloat {
+    0%, 100% { opacity: 0.7; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(-10px); }
+  }
+
+  /* Background sky with subtle pastel gradient */
+  body {
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+    overflow-x: hidden;
+  }
+
+  /* Container for floating hero image */
+  .floating-hero {
+    animation: floatUpDown 6s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  /* Birds flying across screen */
+  .bird {
+    position: absolute;
+    top: 10vh;
+    width: 40px;
+    animation: flyLeftRight 20s linear infinite;
+    opacity: 0;
+  }
+  .bird:nth-child(1) {
+    animation-delay: 0s;
+    top: 15vh;
+  }
+  .bird:nth-child(2) {
+    animation-delay: 6s;
+    top: 25vh;
+  }
+  .bird:nth-child(3) {
+    animation-delay: 12s;
+    top: 18vh;
+  }
+
+  /* Angels around the hero */
+  .angel {
+    position: absolute;
+    width: 80px;
+    filter: grayscale(100%) contrast(120%);
+    opacity: 0.7;
+    animation: angelFloat 10s ease-in-out infinite;
+  }
+  .angel1 {
+    top: 30vh;
+    left: 10vw;
+    animation-delay: 2s;
+  }
+  .angel2 {
+    top: 40vh;
+    right: 15vw;
+    animation-delay: 5s;
+  }
+  .angel3 {
+    top: 50vh;
+    left: 30vw;
+    animation-delay: 8s;
+  }
+
+  /* Button hover animations */
+  .btn-live {
+    @apply text-white font-semibold px-5 py-3 rounded-lg shadow-md transition-transform transform hover:-translate-y-1 hover:scale-105;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Floating CTA */
+  #floating-cta {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 50;
+  }
+</style>
 </head>
-<body class="bg-gray-50">
-    <!-- Header -->
-    <header class="gradient-bg text-white py-4 sticky top-0 z-50">
-      <div class="container mx-auto px-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold">🎵 Zina Singing 4 Fitness Peace</h1>
-        <div class="flex space-x-4">
-          <a
-            href="tel:8189756968"
-            class="bg-yellow-500 text-black px-4 py-2 rounded font-bold hover:bg-yellow-400"
-            >📞 Call Now</a
-          >
-          <a
-            href="https://peaceunityfitness.myshopify.com/"
-            target="_blank"
-            class="bg-green-500 px-4 py-2 rounded font-bold hover:bg-green-400"
-            >🛒 Shop</a
-          >
-        </div>
-      </div>
-    </header>
+<body class="font-serif text-gray-900">
 
-    <!-- Main Content Container -->
-    <div class="container mx-auto px-4 py-8 flex flex-wrap lg:flex-nowrap gap-8">
-      <!-- Main Content Area -->
-      <main class="lg:w-2/3 w-full">
-        <!-- Hero Section with Transformation Photos -->
-        <section class="section-spacing">
-          <div
-            class="transformation-hero rounded-lg p-8 text-white text-center mb-6"
-          >
-            <h2 class="text-4xl font-bold mb-4 floating-text">
-              🌟 INCREDIBLE TRANSFORMATION RESULTS 🌟
-            </h2>
-            <p class="text-xl mb-4">310lbs → 132lbs | ALL MEDICAL PROBLEMS GONE</p>
-            <div class="bg-black bg-opacity-50 p-4 rounded-lg">
-              <p class="text-2xl font-bold text-yellow-400">"I CAN DO THE SAME FOR YOU!"</p>
-            </div>
-          </div>
+<!-- Floating birds -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/White_pigeon_icon.svg/40px-White_pigeon_icon.svg.png" alt="Bird" class="bird" style="top:15vh; left:-50px;" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/White_pigeon_icon.svg/40px-White_pigeon_icon.svg.png" alt="Bird" class="bird" style="top:25vh; left:-80px; animation-delay: 6s;" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/White_pigeon_icon.svg/40px-White_pigeon_icon.svg.png" alt="Bird" class="bird" style="top:18vh; left:-100px; animation-delay: 12s;" />
 
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-white rounded-lg shadow-lg p-6">
-              <img
-                src="https://page1.genspark.site/v1/base64_upload/c5ebf8ab8709bd42ff85c8144b8013b1"
-                alt="Amazing Transformation Results"
-                class="w-full rounded-lg mb-4"
-              />
-              <h3 class="text-xl font-bold text-center text-green-600">
-                REAL TRANSFORMATION PROOF
-              </h3>
-              <p class="text-center text-gray-700">
-                178 pounds lost + All medical problems resolved through ancient
-                healing arts
-              </p>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg p-6">
-              <img
-                src="https://page1.genspark.site/v1/base64_upload/62a71e0b34657f2705ec3f87284dfaa3"
-                alt="Fitness Training Expertise"
-                class="w-full rounded-lg mb-4"
-              />
-              <h3 class="text-xl font-bold text-center text-blue-600">
-                PROVEN EXPERTISE
-              </h3>
-              <p class="text-center text-gray-700">
-                Professional fitness training combined with deep tissue massage
-                therapy
-              </p>
-            </div>
-          </div>
-        </section>
+<!-- Floating angels -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Angel_icon.svg/80px-Angel_icon.svg.png" alt="Angel" class="angel angel1" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Angel_icon.svg/80px-Angel_icon.svg.png" alt="Angel" class="angel angel2" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Angel_icon.svg/80px-Angel_icon.svg.png" alt="Angel" class="angel angel3" />
 
-        <!-- FREE Birthday Karaoke Section -->
-        <section class="bg-pink-100 rounded-lg p-6 section-spacing">
-          <div class="text-center">
-            <h2 class="text-3xl font-bold text-pink-800 mb-4">
-              🎂 FREE Birthday & Anniversary Karaoke Shows! 🎉
-            </h2>
-            <p class="text-lg text-pink-700 mb-4">
-              Celebrate your special day with a FREE live karaoke performance!
-            </p>
-            <div class="bg-pink-200 p-4 rounded-lg">
-              <p class="font-bold text-pink-900">For anyone who believes in PEACE & UNITY</p>
-              <p class="text-pink-800">
-                Donations accepted to support our world peace mission
-              </p>
-            </div>
-            <button
-              class="mt-4 bg-pink-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-pink-700"
-            >
-              🎤 Book Your FREE Celebration
-            </button>
-          </div>
-        </section>
+<!-- Hero section -->
+<header class="relative max-w-7xl mx-auto px-6 pt-24 pb-16 grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
 
-        <!-- Upcoming Events -->
-        <section
-          class="bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg p-6 text-white section-spacing"
-        >
-          <h2 class="text-3xl font-bold mb-4">📅 UPCOMING: Peace & Unity Yard Sale</h2>
-          <div class="grid md:grid-cols-3 gap-4">
-            <div class="bg-white bg-opacity-20 p-4 rounded-lg">
-              <h3 class="font-bold text-xl">🗓️ Saturday</h3>
-              <p>5:00 AM - 4:00 PM</p>
-            </div>
-            <div class="bg-white bg-opacity-20 p-4 rounded-lg">
-              <h3 class="font-bold text-xl">💆 Deep Tissue Massage</h3>
-              <p>FREE healing sessions</p>
-            </div>
-            <div class="bg-white bg-opacity-20 p-4 rounded-lg">
-              <h3 class="font-bold text-xl">🏃 Bootcamp + Karaoke</h3>
-              <p>Fitness & fun combined</p>
-            </div>
-          </div>
-        </section>
+  <!-- Floating image of you singing in the sky -->
+  <div class="flex justify-center md:justify-start relative z-20">
+    <img
+      src="https://python4peace.github.io/reubensou/assets/reuben-singing-transparent.png"
+      alt="Reuben Soul singing floating in the sky"
+      class="floating-hero rounded-lg shadow-2xl max-w-xs w-full"
+      loading="lazy"
+      />
+  </div>
 
-        <!-- Deep Tissue Massage Therapy -->
-        <section class="bg-blue-50 rounded-lg p-6 section-spacing">
-          <h2 class="text-3xl font-bold text-blue-800 mb-6">
-            🙌 Ancient Healing Arts - Deep Tissue Massage Therapy
-          </h2>
-          <div class="bg-blue-100 p-4 rounded-lg mb-6">
-            <p class="text-blue-900 font-bold text-lg">
-              "Why am I doing this for free? Because helping to heal the
-              community is what makes me happy."
-            </p>
-          </div>
+  <!-- Text and CTAs -->
+  <div class="md:col-span-2 text-center md:text-left space-y-6 relative z-20">
+    <h1 class="text-5xl font-extrabold tracking-tight drop-shadow-lg text-white drop-shadow-2xl" style="text-shadow: 2px 2px 4px #000000;">
+      Reuben Soul <br /> <span class="text-yellow-400">Live Performances & Bookings</span>
+    </h1>
+    <p class="text-xl max-w-lg mx-auto md:mx-0 leading-relaxed text-white drop-shadow-lg">
+      Experience the peace and power of music. Book Reuben for your event or catch live streams on all major platforms.
+    </p>
 
-          <div class="grid md:grid-cols-2 gap-6">
-            <div>
-              <h3 class="text-xl font-bold text-blue-700 mb-4">🌟 Conditions We Heal:</h3>
-              <ul class="space-y-2 text-blue-800">
-                <li>💧 Fibromyalgia, Chronic Fatigue & PTSD</li>
-                <li>🩹 Old Injuries, Scar Tissue & Surgery Recovery</li>
-                <li>🦴 Chronic Back & Neck Pain</li>
-                <li>💨 Breathing & Chest Tightness</li>
-                <li>🦵 Sciatica & Nerve Pain</li>
-                <li>🧠 Migraines & Tension Headaches</li>
-                <li>👐 Carpal Tunnel & Repetitive Strain</li>
-                <li>⚖️ Postural Misalignment & Body Imbalance</li>
-              </ul>
-            </div>
-            <div class="bg-blue-200 p-4 rounded-lg">
-              <h3 class="text-xl font-bold text-blue-800 mb-4">🏛️ Ancient Wisdom</h3>
-              <p class="text-blue-900">
-                Time-tested healing arts passed down through generations that
-                helped our ancestors live 200-300 years - refined by modern
-                science.
-              </p>
-              <div class="mt-4 p-3 bg-blue-300 rounded">
-                <p class="font-bold text-blue-900">Drug-Free Healing Alternative</p>
-                <p class="text-blue-800">Release pain from the inside out, naturally</p>
-              </div>
-            </div>
-          </div>
-        </section>
+    <!-- Live Performance Buttons -->
+    <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-5">
+      <a href="https://www.instagram.com/singing4peace" target="_blank" rel="noopener" class="btn-live bg-pink-600 hover:bg-pink-700 shadow-lg">
+        📱 Go Live on Instagram
+      </a>
+      <a href="https://tiktok.com/@reubensing4peace" target="_blank" rel="noopener" class="btn-live bg-black hover:bg-gray-900 shadow-lg">
+        🎥 Perform Live on TikTok
+      </a>
+      <a href="https://youtube.com/@reubensinging4peace156" target="_blank" rel="noopener" class="btn-live bg-red-600 hover:bg-red-700 shadow-lg">
+        📺 Watch on YouTube Live
+      </a>
+      <a href="#" target="_blank" rel="noopener" class="btn-live bg-blue-700 hover:bg-blue-800 shadow-lg">
+        🟢 Stream on Facebook
+      </a>
+    </div>
+  </div>
 
-        <!-- Contact & Location -->
-        <section class="bg-gray-100 rounded-lg p-6 section-spacing">
-          <h2 class="text-2xl font-bold mb-4">📍 Contact & Location</h2>
-          <div class="grid md:grid-cols-2 gap-6">
-            <div>
-              <h3 class="font-bold text-lg mb-2">📞 Contact Information</h3>
-              <p>
-                <strong>Phone:</strong>
-                <a href="tel:8189756968" class="text-blue-600">(818) 975-6968</a> -
-                Available ANY HOUR
-              </p>
-              <p>
-                <strong>Email:</strong>
-                <a
-                  href="/cdn-cgi/l/email-protection#ddaea9bca4bbb4a9bbb4a9b3b8aeaebba8b39dbab0bcb4b1f3beb2b0bcb4b1"
-                  class="text-blue-600"
-                  ><span class="__cf_email__" data-cfemail="c4b7b0a5bda2adb0a2adb0aaa1b7b7a2b1aa84a3a9a5ada8eaa7aba9"
-                    >[email&#160;protected]</span
-                  ></a
-                >
-              </p>
-              <p><strong>We can also meet in the park!</strong></p>
-            </div>
-            <div>
-              <h3 class="font-bold text-lg mb-2">🏢 Address</h3>
-              <p>
-                12816 Inglewood Ave #425<br />Hawthorne, CA 90250
-              </p>
-              <p class="text-sm text-gray-600">Take the 712 Los Angeles route</p>
-            </div>
-          </div>
-        </section>
+  <!-- Background music player -->
+  <div class="absolute bottom-4 left-6 md:left-12 w-64">
+    <audio controls class="w-full rounded-md shadow-lg" preload="none" aria-label="Background music by Reuben Soul">
+      <source src="https://python4peace.github.io/reubensou/assets/background-music.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</header>
 
-        <!-- Social Media & Donations -->
-        <section class="bg-green-50 rounded-lg p-6 section-spacing">
-          <div class="grid md:grid-cols-2 gap-6">
-            <div>
-              <h3 class="text-2xl font-bold text-green-800 mb-4">📱 Follow Our Journey</h3>
-              <div class="space-y-3">
-                <a
-                  href="https://www.instagram.com/singing4peace"
-                  target="_blank"
-                  class="flex items-center space-x-3 bg-pink-500 text-white p-3 rounded-lg hover:bg-pink-600"
-                >
-                  <i class="fab fa-instagram text-2xl"></i>
-                  <span>@singing4peace</span>
-                </a>
-                <a
-                  href="https://youtube.com/@reubensinging4peace156"
-                  target="_blank"
-                  class="flex items-center space-x-3 bg-red-500 text-white p-3 rounded-lg hover:bg-red-600"
-                >
-                  <i class="fab fa-youtube text-2xl"></i>
-                  <span>@reubensinging4peace156</span>
-                </a>
-                <a
-                  href="https://tiktok.com/@reubensing4peace"
-                  target="_blank"
-                  class="flex items-center space-x-3 bg-black text-white p-3 rounded-lg hover:bg-gray-800"
-                >
-                  <i class="fab fa-tiktok text-2xl"></i>
-                  <span>@reubensing4peace</span>
-                </a>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-2xl font-bold text-green-800 mb-4">💝 Support Our Mission</h3>
-              <p class="text-green-700 mb-4">
-                Help us promote world peace and fitness through constructive social
-                forces
-              </p>
-              <div class="space-y-3">
-                <button
-                  class="w-full bg-green-600 text-white p-3 rounded-lg font-bold hover:bg-green-700"
-                >
-                  💰 CashApp: @freedom555
-                </button>
-                <button
-                  class="w-full bg-blue-600 text-white p-3 rounded-lg font-bold hover:bg-blue-700"
-                >
-                  💳 PayPal Donation
-                </button>
-                <button
-                  class="w-full bg-purple-600 text-white p-3 rounded-lg font-bold hover:bg-purple-700"
-                >
-                  📧 Email Donation
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
+<!-- Main Content -->
+<main class="max-w-4xl mx-auto px-6 py-12 space-y-20 bg-white rounded-lg shadow-xl relative z-30">
 
-      <!-- Sidebar with Auto-Playing Videos -->
-      <aside class="lg:w-1/3 w-full">
-        <div class="sticky top-24">
-          <h3 class="text-2xl font-bold mb-4 text-center">
-            🎥 See Our Healing Work in Action
-          </h3>
+  <!-- Book Reuben Form -->
+  <section id="book" class="text-center">
+    <h2 class="text-3xl font-bold mb-4 text-indigo-700">🎉 Book Reuben to Perform at Your Event</h2>
+    <p class="mb-6 text-gray-700">Fill out the form below and we’ll get back to you with availability and pricing.</p>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="max-w-lg mx-auto space-y-4 text-left">
+      <label class="block">
+        <span class="text-gray-700 font-semibold">Name</span>
+        <input type="text" name="name" required
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
+      </label>
+      <label class="block">
+        <span class="text-gray-700 font-semibold">Email</span>
+        <input type="email" name="_replyto" required
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
+      </label>
+      <label class="block">
+        <span class="text-gray-700 font-semibold">Event Details</span>
+        <textarea name="message" rows="4" required
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+      </label>
+      <button type="submit"
+        class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-md w-full transition shadow-lg">
+        Submit Booking Request
+      </button>
+    </form>
+  </section>
 
-          <!-- Video 1 -->
-          <div class="video-container mb-4 mx-auto">
-            <iframe
-              src="https://www.tiktok.com/embed/v2/ZTjxUWUBK"
-              width="100%"
-              height="100%"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+  <!-- Subscribe Section -->
+  <section id="subscribe" class="bg-gradient-to-r from-purple-600 via-indigo-700 to-blue-600 rounded-lg shadow-md p-8 text-white text-center">
+    <h2 class="text-3xl font-bold mb-4">💌 Subscribe for Updates</h2>
+    <p class="mb-6 max-w-md mx-auto">Stay informed about live shows, new music, and peace mission news.</p>
+    <form action="https://your-mailchimp-url.usX.list-manage.com/subscribe/post?u=YOUR_U&amp;id=YOUR_ID" method="post"
+      target="_blank" class="flex max-w-md mx-auto">
+      <input type="email" name="EMAIL" placeholder="Your email address" required
+        class="rounded-l-md px-4 py-2 text-gray-900 flex-grow" />
+      <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-6 rounded-r-md transition">
+        Subscribe
+      </button>
+    </form>
+  </section>
+
+  <!-- Donations -->
+  <section id="donate" class="text-center">
+    <h2 class="text-3xl font-bold mb-4 text-green-700">💳 Support the Mission - Donate</h2>
+    <p class="mb-6 text-gray-700 max-w-lg mx-auto">Help Reuben continue spreading peace through music and healing.</p>
+    <div class="flex flex-wrap justify-center gap-6">
+      <a href="https://cash.app/$freedom555" target="_blank" rel="noopener"
+        class="bg-green-400 hover:bg-green-500 text-white font-bold px-6 py-3 rounded-lg shadow-md transition-transform transform hover:-translate-y-1 hover:scale-105">
+        CashApp
+      </a>
+      <a href="https://paypal.me/stayfitfitnessfun" target="_blank" rel="noopener"
+        class="bg-blue-500 hover:bg-blue-600 text-white font-bold px-6 py-3 rounded-lg shadow-md transition-transform transform hover:-translate-y-1 hover:scale-105">
+        PayPal
+      </a>
+      <button onclick="alert('Zelle Email: stayfitfitnessfun@gmail.com')"
+        class="bg-purple-600 hover:bg-purple-700 text-white font-bold px-6 py-3 rounded-lg shadow-md transition-transform transform hover:-translate-y-1 hover:scale-105">
+        Zelle
+      </button>
+    </div>
+  </section>
+
+</main>
+
+<!-- Floating CTA Button -->
+<div id="floating-cta" aria-label="Book Reuben or Subscribe">
+  <a href="#book"
+    class="block bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-6 py-3 shadow-lg font-semibold transition">
+    🎉 Book Reuben Now
+  </a>
+</div>
+
+<footer class="mt-20 p-6 text-center text-sm text-gray-700">
+  &copy; 2025 Reuben Soul. All rights reserved.
+</footer>
+</body>
+</html>
