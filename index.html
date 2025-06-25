@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reuben Soul | Live Performances & Bookings</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  /* Smooth floating animation for main image */
+  @keyframes floatUpDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  /* Slow flying birds animation */
+  @keyframes flyLeftRight {
+    0% { transform: translateX(-100px); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateX(100vw); opacity: 0; }
+  }
+
+  /* Angel fade and slight float */
+  @keyframes angelFloat {
+    0%, 100% { opacity: 0.7; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(-10px); }
+  }
+
+  /* Background sky with subtle pastel gradient */
+  body {
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+    overflow-x: hidden;
+  }
+
+  /* Container for floating hero image */
+  .floating-hero {
+    animation: floatUpDown 6s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  /* Birds flying across screen */
+  .bird {
+    position: absolute;
+    top: 10vh;
+    width: 40px;
+    animation: flyLeftRight 20s linear infinite;
+    opacity: 0;
+  }
+  .bird:nth-child(1) {
+    animation-delay: 0s;
+    top: 15vh;
+  }
+  .bird:nth-child(2) {
+    animation-delay: 6s;
+    top: 25vh;
+  }
+  .bird:nth-child(3) {
+    animation-delay: 12s;
+    top: 18vh;
+  }
+
+  /* Angels around the hero */
+  .angel {
+    position: absolute;
+    width: 80px;
+    filter: grayscale(100%) contrast(120%);
+    opacity: 0.7;
+    animation: angelFloat 10s ease-in-out infinite;
+  }
+  .angel1 {
+    top: 30vh;
+    left: 10vw;
+    animation-delay: 2s;
+  }
+  .angel2 {
+    top: 40vh;
+    right: 15vw;
+    animation-delay: 5s;
+  }
+  .angel3 {
+    top: 50vh;
+    left: 30vw;
+    animation-delay: 8s;
+  }
+
+  /* Button hover animations */
+  .btn-live {
+    @apply text-white font-semibold px-5 py-3 rounded-lg shadow-md transition-transform transform hover:-translate-y-1 hover:scale-105;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Floating CTA */
+  #floating-cta {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 50;
+  }
+</style>
+</head>
+<body class="font-serif text-gray-900">
+
+<!-- Floating birds -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/White_pigeon_icon.svg/40px-White_pigeon_icon.svg.png" alt="Bird" class="bird" style="top:15vh; left:-50px;" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/White_pigeon_icon.svg/40px-White_pigeon_icon.svg.png" alt="Bird" class="bird" style="top:25vh; left:-80px; animation-delay: 6s;" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/White_pigeon_icon.svg/40px-White_pigeon_icon.svg.png" alt="Bird" class="bird" style="top:18vh; left:-100px; animation-delay: 12s;" />
+
+<!-- Floating angels -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Angel_icon.svg/80px-Angel_icon.svg.png" alt="Angel" class="angel angel1" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Angel_icon.svg/80px-Angel_icon.svg.png" alt="Angel" class="angel angel2" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Angel_icon.svg/80px-Angel_icon.svg.png" alt="Angel" class="angel angel3" />
+
+<!-- Hero section -->
+<header class="relative max-w-7xl mx-auto px-6 pt-24 pb-16 grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+
+  <!-- Floating image of you singing in the sky -->
+  <div class="flex justify-center md:justify-start relative z-20">
+    <img
+      src="https://python4peace.github.io/reubensou/assets/reuben-singing-transparent.png"
+      alt="Reuben Soul singing floating in the sky"
+      class="floating-hero rounded-lg shadow-2xl max-w-xs w-full"
+      loading="lazy"
+      />
+  </div>
+
+  <!-- Text and CTAs -->
+  <div class="md:col-span-2 text-center md:text-left space-y-6 relative z-20">
+    <h1 class="text-5xl font-extrabold tracking-tight drop-shadow-lg text-white drop-shadow-2xl" style="text-shadow: 2px 2px 4px #000000;">
+      Reuben Soul <br /> <span class="text-yellow-400">Live Performances & Bookings</span>
+    </h1>
+    <p class="text-xl max-w-lg mx-auto md:mx-0 leading-relaxed text-white drop-shadow-lg">
+      Experience the peace and power of music. Book Reuben for your event or catch live streams on all major platforms.
+    </p>
+
+    <!-- Live Performance Buttons -->
+    <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-5">
+      <a href="https://www.instagram.com/singing4peace" target="_blank" rel="noopener" class="btn-live bg-pink-600 hover:bg-pink-700 shadow-lg">
+        📱 Go Live on Instagram
+      </a>
+      <a href="https://tiktok.com/@reubensing4peace" target="_blank" rel="noopener" class="btn-live bg-black hover:bg-gray-900 shadow-lg">
+        🎥 Perform Live on TikTok
+      </a>
+      <a href="https://youtube.com/@reubensinging4peace156" target="_blank" rel="noopener" class="btn-live bg-red-600 hover:bg-red-700 shadow-lg">
+        📺 Watch on YouTube Live
+      </a>
+      <a href="#" target="_blank" rel="noopener" class="btn-live bg-blue-700 hover:bg-blue-800 shadow-lg">
+        🟢 Stream on Facebook
+      </a>
+    </div>
+  </div>
+
+  <!-- Background music player -->
+  <div class="absolute bottom-4 left-6 md:left-12 w-64">
+    <audio controls class="w-full rounded-md shadow-lg" preload="none" aria-label="Background music by Reuben Soul">
+      <source src="https://python4peace.github.io/reubensou/assets/background-music.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="max-w-4xl mx-auto px-6 py-12 space-y-20 bg-white rounded-lg shadow-xl relative z-30">
+
+  <!-- Book Reuben Form -->
+  <section id="book" class="text-center">
+    <h2 class="text-3xl font-bold mb-4 text-indigo-700">🎉 Book Reuben to Perform at Your Event</h2>
+    <p class="mb-6 text-gray-700">Fill out the form below and we’ll get back to you with availability and pricing.</p>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="max-w-lg mx-auto space-y-4 text-left">
+      <label class="block">
+        <span class="text-gray-700 font-semibold">Name</span>
+        <input type="text" name="name" required
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
+      </label>
+      <label class="block">
+        <span class="text-gray-700 font-semibold">Email</span>
+        <input type="email" name="_replyto" required
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
+      </label>
+      <label class="block">
+        <span class="text-gray-700 font-semibold">Event Details</span>
+        <textarea name="message" rows="4" required
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+      </label>
+      <button type="submit"
+        class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-md w-full transition shadow-lg">
+        Submit Booking Request
+      </button>
+    </form>
+  </section>
+
+  <!-- Subscribe Section -->
+  <section id="subscribe" class="bg-gradient-to-r from-purple-600 via-indigo-700 to-blue-600 rounded-lg shadow-md p-8 text-white text-center">
+    <h2 class="text-3xl font-bold mb-4">💌 Subscribe for Updates</h2>
+    <p class="mb-6 max-w-md mx-auto">Stay informed about live shows, new music, and peace mission news.</p>
+    <form action="https://your-mailchimp-url.usX.list-manage.com/subscribe/post?u=YOUR_U&amp;id=YOUR_ID" method="post"
+      target="_blank" class="flex max-w-md mx-auto">
+      <input type="email" name="EMAIL" placeholder="Your email address" required
+        class="rounded-l-md px-4 py-2 text-gray-900 flex-grow" />
+      <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-6 rounded-r-md transition">
+        Subscribe
+      </button>
+    </form>
+  </section>
+
+  <!-- Donations -->
+  <section id="donate" class="text-center">
+    <h2 class="text-3xl font-bold mb-4 text-green-700">💳 Support the Mission - Donate</h2>
+    <p class="mb-6 text-gray-700 max-w-lg mx-auto">Help Reuben continue spreading peace through music and healing.</p>
+    <div class="flex flex-wrap justify-center gap-6">
+      <a href="https://cash.app/$freedom555" target="_blank" rel="noopener"
+        class="bg-green-400 hover:bg-green-500 text-white font-bold px-6 py-3 rounded-lg shadow-md transition-transform transform hover:-translate-y-1 hover:scale-105">
+        CashApp
+      </a>
+      <a href="https://paypal.me/stayfitfitnessfun" target="_blank" rel="noopener"
+        class="bg-blue-500 hover:bg-blue-600 text-white font-bold px-6 py-3 rounded-lg shadow-md transition-transform transform hover:-translate-y-1 hover:scale-105">
+        PayPal
+      </a>
+      <button onclick="alert('Zelle Email: stayfitfitnessfun@gmail.com')"
+        class="bg-purple-600 hover:bg-purple-700 text-white font-bold px-6 py-3 rounded-lg shadow-md transition-transform transform hover:-translate-y-1 hover:scale-105">
+        Zelle
+      </button>
+    </div>
+  </section>
+
+</main>
+
+<!-- Floating CTA Button -->
+<div id="floating-cta" aria-label="Book Reuben or Subscribe">
+  <a href="#book"
+    class="block bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-6 py-3 shadow-lg font-semibold transition">
+    🎉 Book Reuben Now
+  </a>
+</div>
+
+<footer class="mt-20 p-6 text-center text-sm text-gray-700">
+  &copy; 2025 Reuben Soul. All rights reserved.
+</footer>
+</body>
+</html>
