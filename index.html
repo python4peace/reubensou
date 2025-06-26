@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reuben Soul – Strength to Stand</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #dbeafe, #fef9ff);
+      overflow-x: hidden;
+    }
+    .bird {
+      position: absolute;
+      width: 40px;
+      opacity: 0.4;
+      animation: fly 25s linear infinite;
+    }
+    .bird:nth-child(1) { top: 5%; left: -60px; animation-delay: 0s; }
+    .bird:nth-child(2) { top: 25%; left: -120px; animation-delay: 5s; }
+    .bird:nth-child(3) { top: 55%; left: -180px; animation-delay: 10s; }
+    @keyframes fly {
+      0% { transform: translateX(0) scale(1); }
+      100% { transform: translateX(120vw) scale(1.2); }
+    }
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0px); }
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body class="relative font-sans text-gray-900">
+
+  <!-- Floating birds -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Bird_icon.svg/64px-Bird_icon.svg.png" class="bird" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Bird_icon.svg/64px-Bird_icon.svg.png" class="bird" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Bird_icon.svg/64px-Bird_icon.svg.png" class="bird" />
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="background.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Book Banner -->
+  <section class="text-center py-12 bg-yellow-100 border-b-4 border-yellow-300 shadow-xl">
+    <img src="strength_to_stand_cover.jpg" alt="Strength to Stand Book Cover" class="mx-auto w-72 md:w-96 rounded-lg shadow-lg mb-4" />
+    <h1 class="text-5xl md:text-6xl font-bold text-gray-800">Strength to Stand</h1>
+    <p class="mt-2 text-lg text-gray-700 italic">The Night James Brown Changed My Life</p>
+    <a href="https://www.amazon.com/dp/B0FBMHDM9L" target="_blank"
+       class="mt-4 inline-block bg-yellow-500 hover:bg-yellow-600 text-white text-lg font-semibold px-8 py-3 rounded-full shadow-md">
+      📖 Buy on Amazon
+    </a>
+  </section>
+
+  <!-- Hero Section -->
+  <header class="text-center py-12 bg-indigo-800 text-white">
+    <h2 class="text-3xl font-bold mb-3">Reuben W. Gobah (Reuben Soul)</h2>
+    <p class="text-lg max-w-3xl mx-auto">I'm a transformation coach, peace advocate, and author of the memoir <em>Strength to Stand</em>. I lost 30% of my family to civil war. I will do anything for peace—even sing "We Are the World" or Bob Marley's "One Love" during any interview to show my heart.</p>
+  </header>
+
+  <!-- Live Singing Image -->
+  <section class="text-center py-10">
+    <h2 class="text-2xl font-semibold mb-4">🎤 Singing for Peace</h2>
+    <img src="resized_IMG_20230328_182704.jpg" alt="Reuben Singing" class="floating mx-auto rounded-2xl shadow-2xl max-w-md border-4 border-white" />
+  </section>
+
+  <!-- Peace Yard Sign -->
+  <section class="text-center py-10">
+    <h2 class="text-2xl font-semibold mb-4">🌿 Peace Yard Sale</h2>
+    <img src="forsaleyard_resized.jpg" alt="Yard Sign" class="mx-auto rounded-lg shadow-lg max-w-md border border-indigo-200" />
+  </section>
+
+  <!-- Social Media Links -->
+  <section class="text-center py-10">
+    <h2 class="text-3xl font-semibold mb-6">🎥 Watch Me Live</h2>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="https://www.instagram.com/singing4peace" target="_blank" class="bg-pink-600 hover:bg-pink-700 text-white font-bold px-6 py-3 rounded-full shadow-md">📱 Instagram</a>
+      <a href="https://tiktok.com/@reubensing4peace" target="_blank" class="bg-black hover:bg-gray-800 text-white font-bold px-6 py-3 rounded-full shadow-md">🎥 TikTok</a>
+      <a href="https://youtube.com/@reubensinging4peace156" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-full shadow-md">📺 YouTube</a>
+      <a href="https://www.facebook.com/AfroAmericans4Peace/" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-full shadow-md">🟢 Facebook</a>
+    </div>
+  </section>
+
+  <!-- Project Pitch Section -->
+  <section class="text-center py-12 bg-gray-100">
+    <h2 class="text-2xl font-bold mb-4">🎤 Peace & Unity Karaoke Show</h2>
+    <p class="max-w-2xl mx-auto text-lg text-gray-700">I'm planning a show where I’ll challenge celebrities to sing and dance their own songs. If they win, they get the greatest gift of their life. If I win, they donate to the World Peace Project. A fun, meaningful way to unite the world.</p>
+  </section>
+
+  <!-- Donation Section -->
+  <section class="text-center py-12">
+    <h2 class="text-3xl font-bold mb-4 text-green-700">💖 Support the Mission</h2>
+    <p class="text-lg text-gray-700 mb-4">Donations help support war-affected children and global unity through peace music.</p>
+    <div class="space-y-2 text-lg">
+      <p><strong>Cash App:</strong> <code>$freedom555</code></p>
+      <p><strong>Zelle / PayPal:</strong> <code>stayfitfitnessfun@gmail.com</code></p>
+      <p><strong>Bank (Intl):</strong> Routing: <code>211370150</code> &nbsp; Account: <code>99250161</code></p>
+    </div>
+  </section>
+
+  <!-- Call to Action Form -->
+  <section class="text-center py-12 bg-indigo-50">
+    <h2 class="text-2xl font-bold mb-4">🎉 Book Reuben or Subscribe</h2>
+    <p class="mb-6 text-gray-700">Want to invite Reuben to your event or get updates?</p>
+    <form action="https://formspree.io/f/mnqeyozb" method="POST" class="max-w-md mx-auto space-y-4">
+      <input type="email" name="email" placeholder="Your email address" required class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      <textarea name="message" placeholder="Your message" rows="4" class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+      <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-600 p-6">
+    &copy; 2025 Reuben Soul. Spreading Peace, Strength, and Love. 🕊️
+  </footer>
+
+</body>
+</html>
